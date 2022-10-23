@@ -1,0 +1,43 @@
+*{
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+    height: 100%;
+}
+
+.title {
+    font-size: 40px;
+    letter-spacing: 0.1em;
+    color: pink;
+}
+
+#description {
+    margin: 5%;
+    line-height: 30px;
+    text-transform: bold;
+}
+
+#main-page {
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 3%;
+}
+
+#styled-button {
+    padding: 10px 30px;
+    margin-top: 5%;
+    background-color: gray;
+    color: white;
+    font-size: 18px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    /* -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; */
+}

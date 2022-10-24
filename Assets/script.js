@@ -128,4 +128,27 @@ function finishedGame(points) {
     resultsTitle.append(submitButton);
     footer.html(""); //clears footer
     footer.html("<a href = 'index.html'>PLAY GAME AGAIN</a>"); //gives option to play again
-}
+
+    submitButton.on("click", function() {
+        initials = $("#input-text").val();
+        if (initials === null) 
+            console.log ("Nothing was typed in.");
+        } else {
+            var scoreObject = {
+                "initials": initialsl,
+                "score": points
+            }
+        }
+        let allScores = localStorage.getItem("allScores"); //retrieves scores from local storage
+        if (allScores === null) {
+            allScores = [];
+            
+        } else {
+            allScores = JSON.parse(allScores);
+        }
+        allScores.push(scoreObject);
+        let newScore = JSON.stringify(allScores);
+        localStorage.setItem("allScores", newScore);
+        window.location.replace("highScores.html"); 
+    })
+};

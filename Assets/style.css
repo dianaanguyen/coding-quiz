@@ -80,3 +80,8 @@ footer a{
     width: 30%; 
     margin: 0px auto;
 }
+
+.high-scores li {
+    margin: 3%;
+    font-size: 20px;
+}

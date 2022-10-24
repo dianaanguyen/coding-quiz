@@ -51,7 +51,7 @@ var questions = {
 }
 };
 
-function startTimer() {
+function startTimer() { //start the timer
     if (totalTime === 0) {
         totalTime= setInterval(function() {
             secondsLeft--;
@@ -65,3 +65,31 @@ function startTimer() {
     showQuestions();
 };
 
+function showQuestions () { //show questions
+    if (questionNumber <= 7){
+        mainPage.html("");
+        answerChoices.html("") //clear answer choices
+        let writeQuestion = questions[questionNumber].Q;
+        let h1 = $("<h1>");
+        h1.addClass("question")
+        h1.text (writeQuestion);
+        correctAnswer = questions[questionNumber].Correct; //stores correct answer
+
+        questions[questionNumber].Answers.forEach(function(each) {
+            let answerButton = $("<button>");
+            answerButton.text(each);
+            answerChoices.append(answerButton); //adds button after question
+        });
+        mainPage.append(h1); //adds questions to html
+        answerChoices.on("click", function(e) {
+            $(this).off("click");
+            let target = e.target;
+            userChoice = target.textContent; 
+            compareAnswers(userChoice, correctAnswer);
+        });
+    } else {
+        clearInterval(totalTime); //stops timer
+        timeLeft.text("0"); //sets timer back to 0
+        finishedGame(points);
+    }
+};

@@ -49,4 +49,19 @@ var questions = {
     "Answers": ["Objects", "Methods", "Properties", "Commands"],
     "Correct": "Methods"
 }
-}
+};
+
+function startTimer() {
+    if (totalTime === 0) {
+        totalTime= setInterval(function() {
+            secondsLeft--;
+            timeLeft.text(secondsLeft);
+            if (secondsLeft === 0) {
+                clearInterval(totalTime);
+                finishedGame(); //displays finished screen
+            }
+        }, 1000) //1000ms=1 second
+    }
+    showQuestions();
+};
+

@@ -21,3 +21,5 @@ if (allScores !== null) {
     })
 };
 }
+
+showScores();

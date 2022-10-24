@@ -131,7 +131,7 @@ function finishedGame(points) {
 
     submitButton.on("click", function() {
         initials = $("#input-text").val();
-        if (initials === null) 
+        if (initials === null) {
             console.log ("Nothing was typed in.");
         } else {
             var scoreObject = {
@@ -142,7 +142,7 @@ function finishedGame(points) {
         let allScores = localStorage.getItem("allScores"); //retrieves scores from local storage
         if (allScores === null) {
             allScores = [];
-            
+
         } else {
             allScores = JSON.parse(allScores);
         }
@@ -152,3 +152,5 @@ function finishedGame(points) {
         window.location.replace("highScores.html"); 
     })
 };
+
+startButton.on("click", startTimer); //starts timer when button is clicked

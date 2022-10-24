@@ -11,6 +11,23 @@ body {
     height: 100%;
 }
 
+html, body {
+    height: 100%;
+}
+
+footer {
+    bottom: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 23px 50px;
+    text-align: center;
+}
+
+footer a{
+    color: black;
+}
+
 .title {
     font-size: 40px;
     letter-spacing: 0.1em;
@@ -40,4 +57,26 @@ body {
     /* -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; */
+}
+
+#answer-choices button{
+    display: block;
+    margin: auto;
+    margin-bottom: 2%;
+    padding: 10px 20px;
+    background-color: gray;
+    color: white;
+    -webkit-border-radius: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+#answer-choices {
+    text-align: center;
+    font-size: 20px;
+}
+
+.time {
+    width: 30%; 
+    margin: 0px auto;
 }

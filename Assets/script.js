@@ -93,3 +93,39 @@ function showQuestions () { //show questions
         finishedGame(points);
     }
 };
+
+function compareAnswers(userChoice, correctAnswer) {
+    questionNumber++;
+    if (userChoice === correctAnswer) {
+        let p = $("<p>");
+        p.text("Correct!");
+        answerChoices.append(p);
+        secondsLeft -= timePenalized;
+    }
+    setTimeout(function () {
+    
+    showQuestions();
+    }, 1000);
+};
+
+function finishedGame(points) {
+    mainPage.html("");
+    answerChoices.html("");
+    let resultsTitle = mainPage.html("<h1>RESULTS</h1>");
+    resultsTitle.attr("class", "results-title"); //to style
+    let p = $("<p>");
+    p.text('You scored: ${points} points out of 7.');
+    let p2 = $("<p>");
+    p2.text("Enter you intitals here if you would like to save your score:");
+    let input = $("<input>");
+    input.attr("id", "input-text");
+    let submitButton = $("<button>");
+    submitButton.attr("id", "submitInitialsButton");
+    submitButton.text("Submit");
+    resultsTitle.append(p);
+    resultsTitle.append(p2);
+    resultsTitle.append(input);
+    resultsTitle.append(submitButton);
+    footer.html(""); //clears footer
+    footer.html("<a href = 'index.html'>PLAY GAME AGAIN</a>"); //gives option to play again
+}

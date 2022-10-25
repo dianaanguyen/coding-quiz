@@ -29,6 +29,11 @@ body {
     background-color: pink;
 }
 
+.back-page {
+    background-color: pink;
+    color: black;
+}
+
 html, body {
     height: 100%;
 }

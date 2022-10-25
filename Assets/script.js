@@ -120,7 +120,7 @@ function finishedGame(points) {
     var resultsTitle = mainPage.html("<h1>RESULTS</h1>");
     resultsTitle.attr("class", "results-title"); //to style
     var p = $("<p>");
-    p.text('You scored: ${points} points out of 7. ');
+    p.text(`You scored: ${points} points out of 7.`);
     var p2 = $("<p>");
     p2.text("Enter your intitals here if you would like to save your score: ");
     var input = $("<input>");

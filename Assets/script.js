@@ -66,10 +66,10 @@ function startTimer() { //start the timer
 };
 
 function showQuestions () { //show questions
-    if (questionNumber <= 7){
+    if (questionNumber <= 7) {
         mainPage.html("");
         answerChoices.html("") //clear answer choices
-        var writeQuestion = questions[questionNumber].Q;
+        var writeQuestion = questions[questionNumber].Question;
         var h1 = $("<h1>");
         h1.addClass("question")
         h1.text (writeQuestion);

@@ -69,21 +69,21 @@ function showQuestions () { //show questions
     if (questionNumber <= 7){
         mainPage.html("");
         answerChoices.html("") //clear answer choices
-        let writeQuestion = questions[questionNumber].Q;
-        let h1 = $("<h1>");
+        var writeQuestion = questions[questionNumber].Q;
+        var h1 = $("<h1>");
         h1.addClass("question")
         h1.text (writeQuestion);
         correctAnswer = questions[questionNumber].Correct; //stores correct answer
 
         questions[questionNumber].Answers.forEach(function(each) {
-            let answerButton = $("<button>");
+            var answerButton = $("<button>");
             answerButton.text(each);
             answerChoices.append(answerButton); //adds button after question
         });
         mainPage.append(h1); //adds questions to html
         answerChoices.on("click", function(e) {
             $(this).off("click");
-            let target = e.target;
+            var target = e.target;
             userChoice = target.textContent; 
             compareAnswers(userChoice, correctAnswer);
         });
@@ -97,7 +97,7 @@ function showQuestions () { //show questions
 function compareAnswers(userChoice, correctAnswer) {
     questionNumber++;
     if (userChoice === correctAnswer) {
-        let p = $("<p>");
+        var p = $("<p>");
         p.text("Correct!");
         answerChoices.append(p);
         secondsLeft -= timePenalized;
@@ -111,15 +111,15 @@ function compareAnswers(userChoice, correctAnswer) {
 function finishedGame(points) {
     mainPage.html("");
     answerChoices.html("");
-    let resultsTitle = mainPage.html("<h1>RESULTS</h1>");
+    var resultsTitle = mainPage.html("<h1>RESULTS</h1>");
     resultsTitle.attr("class", "results-title"); //to style
-    let p = $("<p>");
+    var p = $("<p>");
     p.text('You scored: ${points} points out of 7.');
-    let p2 = $("<p>");
+    var p2 = $("<p>");
     p2.text("Enter you intitals here if you would like to save your score:");
-    let input = $("<input>");
+    var input = $("<input>");
     input.attr("id", "input-text");
-    let submitButton = $("<button>");
+    var submitButton = $("<button>");
     submitButton.attr("id", "submitInitialsButton");
     submitButton.text("Submit");
     resultsTitle.append(p);
@@ -135,11 +135,11 @@ function finishedGame(points) {
             console.log ("Nothing was typed in.");
         } else {
             var scoreObject = {
-                "initials": initialsl,
+                "initials": initials,
                 "score": points
             }
         }
-        let allScores = localStorage.getItem("allScores"); //retrieves scores from local storage
+        var allScores = localStorage.getItem("allScores"); //retrieves scores from local storage
         if (allScores === null) {
             allScores = [];
 
@@ -147,7 +147,7 @@ function finishedGame(points) {
             allScores = JSON.parse(allScores);
         }
         allScores.push(scoreObject);
-        let newScore = JSON.stringify(allScores);
+        var newScore = JSON.stringify(allScores);
         localStorage.setItem("allScores", newScore);
         window.location.replace("highScores.html"); 
     })

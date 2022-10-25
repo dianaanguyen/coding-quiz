@@ -133,3 +133,12 @@ footer {
     width: 30%; 
     margin: 0px auto;
 }
+
+#answer-choices button:hover,
+#styled-button:hover,
+#submitInitialsButton:hover,
+#clearButton:hover {
+    background-color: #ffffff;
+    color: pink;
+    border-color: pink;
+}

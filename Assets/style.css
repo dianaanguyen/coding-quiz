@@ -9,9 +9,10 @@ header {
     display: inline;
     background-color: pink;
     width: 100%;
-    padding: 45px 50px;
+    padding: 45px 45px;
     top: 0;
     position: fixed;
+    padding-bottom: 25px;
 }
 
 h2 {
@@ -24,14 +25,10 @@ body {
     height: 100%;
 }
 
-.black-text {
-    color: black;
-    background-color: pink;
-}
-
+.black-text,
 .back-page {
-    background-color: pink;
     color: black;
+    background-color: pink;
 }
 
 html, body {
@@ -55,7 +52,7 @@ footer {
     font-size: 40px;
     letter-spacing: 0.1em;
     color: pink;
-    padding-top: 50px;
+    padding-top: 60px;
 }
 
 #description {
@@ -166,47 +163,4 @@ footer {
     background-color: #ffffff;
     color: pink;
     border-color: pink;
-}
-
-@media only screen and (min-width: 2000px){
-    .title {
-        font-size: 80px;
-    }
-
-    #description {
-        font-size: 30px;
-    }
-
-    .question {
-        font-size: 40px;
-        padding-bottom: 3%;
-    }
-
-    footer {
-        font-size: 40px;
-    }
-
-    .results-title {
-        font-size: 40px;
-    }
-
-    .high-scores-title{
-        font-size: 40px;
-    }
-
-    #answer-choices button {
-        display: block;
-        margin: auto;
-        margin-bottom: 2%;
-        padding: 20px 60px;
-        background-color: gray;
-        color: white;
-        -webkit-border-radius: 3px;
-        border-radius: 3px;
-        -webkit-transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-        font-size: 40px;
-        
-    }
 }

@@ -73,11 +73,7 @@ footer {
     background-color: gray;
     color: white;
     font-size: 18px;
-    -webkit-border-radius: 3px;
     border-radius: 3px;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
 }
 
 #answer-choices button{
@@ -87,11 +83,7 @@ footer {
     padding: 10px 20px;
     background-color: gray;
     color: white;
-    -webkit-border-radius: 3px;
     border-radius: 3px;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
 }
 
 #answer-choices p {
@@ -104,11 +96,7 @@ footer {
     background-color: gray;
     color: white;
     font-size: 22px;
-    -webkit-border-radius: 3px;
     border-radius: 3px;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
 }
 
 #clearButton {
@@ -119,11 +107,7 @@ footer {
     background-color: gray;
     color: white;
     padding: 10px 20px;
-    -webkit-border-radius: 3px;
     border-radius: 3px;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
 }
 
 #input-text {
@@ -164,3 +148,11 @@ footer {
     color: pink;
     border-color: pink;
 }
+
+
+
+@media screen and (max-width: 768px){
+    /* .title {
+        font-size: 40px;
+    } */
+} 

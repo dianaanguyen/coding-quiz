@@ -101,6 +101,11 @@ function compareAnswers(userChoice, correctAnswer) {
         p.text("Correct!");
         answerChoices.append(p);
         secondsLeft -= timePenalized;
+    } else if (userChoice !== correctAnswer){
+        var p =$("<p>");
+        p.text("Wrong!");
+        answerChoices.append(p); //show answer feedback
+        secondsLeft -= timePenalized; //wrong answer deducts 5 secs
     }
     setTimeout(function () {
     
@@ -116,7 +121,7 @@ function finishedGame(points) {
     var p = $("<p>");
     p.text('You scored: ${points} points out of 7.');
     var p2 = $("<p>");
-    p2.text("Enter you intitals here if you would like to save your score:");
+    p2.text("Enter your intitals here if you would like to save your score:");
     var input = $("<input>");
     input.attr("id", "input-text");
     var submitButton = $("<button>");

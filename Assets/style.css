@@ -1,5 +1,5 @@
 *{
-    background-color: whitesmoke;
+    background-color: white;
     margin: 0;
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -26,6 +26,7 @@ body {
 
 .black-text {
     color: black;
+    background-color: pink;
 }
 
 html, body {
@@ -114,9 +115,10 @@ footer {
 .high-scores-title {
     text-align: center;
     margin-top: 7%;
-    font-size: 35px;
+    font-size: 20px;
     letter-spacing: .2em;
     margin-bottom: 10%;
+    padding-top: 50px;
 }
 
 .results-title {
@@ -132,6 +134,7 @@ footer {
 .time {
     width: 30%; 
     margin: 0px auto;
+    background-color: pink;
 }
 
 #answer-choices button:hover,

@@ -95,12 +95,13 @@ function showQuestions () { //show questions
 };
 
 function compareAnswers(userChoice, correctAnswer) {
-    questionNumber++;
+    questionNumber++; //goes to next question
     if (userChoice === correctAnswer) {
         var p = $("<p>");
         p.text("Correct!");
         answerChoices.append(p);
-        secondsLeft -= timePenalized;
+        points++; // adds points if answer is correct
+
     } else if (userChoice !== correctAnswer){
         var p =$("<p>");
         p.text("Wrong!");
@@ -119,9 +120,9 @@ function finishedGame(points) {
     var resultsTitle = mainPage.html("<h1>RESULTS</h1>");
     resultsTitle.attr("class", "results-title"); //to style
     var p = $("<p>");
-    p.text('You scored: ${points} points out of 7.');
+    p.text('You scored: ${points} points out of 7. ');
     var p2 = $("<p>");
-    p2.text("Enter your intitals here if you would like to save your score:");
+    p2.text("Enter your intitals here if you would like to save your score: ");
     var input = $("<input>");
     input.attr("id", "input-text");
     var submitButton = $("<button>");
@@ -154,7 +155,7 @@ function finishedGame(points) {
         allScores.push(scoreObject);
         var newScore = JSON.stringify(allScores);
         localStorage.setItem("allScores", newScore);
-        window.location.replace("highScores.html"); 
+        window.location.replace("highScores.html"); //replaces screen with high scores page
     })
 };
 

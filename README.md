@@ -1,7 +1,7 @@
 # Code Quiz
 
 # Your Task
-this week’s Challenge invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. This week’s coursework will teach you all the skills you need to succeed in this assignment.
+This week’s Challenge invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. This week’s coursework will teach you all the skills you need to succeed in this assignment.
 
 # User Story
 <img width="699" alt="Screen Shot 2022-10-23 at 12 23 23 PM" src="https://user-images.githubusercontent.com/111664734/197917445-d6d846e8-f947-4075-9def-8bd9b14750f6.png">
